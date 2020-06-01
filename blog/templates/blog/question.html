@@ -1,0 +1,15 @@
+{% extends "blog/base.html" %}
+{% block content %}
+    {% for q in questions %}
+    <article class="media content-section">
+        <div class="media-body">
+        <div class="article-metadata">
+            <a class="mr-2" href="#">{{ q.title }}</a>
+            <small class="text-muted">{{ q.priority }}</small>
+        </div>
+            <p class="article-content">{{ q.Question }}</p>
+        </div>
+    </article>
+    {%endfor%}
+
+{% endblock content %}
